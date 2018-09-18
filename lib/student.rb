@@ -54,7 +54,7 @@ class Student
   end
 
   def self.all_students_in_grade_9
-    "SELECT * FROM students WHERE grade = 9"
+    "SELECT students.name FROM students WHERE grade = 9"
   end
 
   def self.drop_table
