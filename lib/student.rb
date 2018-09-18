@@ -55,6 +55,8 @@ class Student
 
   def self.all_students_in_grade_9
     "SELECT students.name FROM students WHERE grade = 9"
+    DB[:conn].execute(sql).map do |row|
+     self.new_from_db(row)
   end
 
   def self.drop_table
